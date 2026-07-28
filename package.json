@@ -1,0 +1,12 @@
+{
+  "name": "manchester-meditations",
+  "version": "1.0.0",
+  "description": "Manchester Meditations — observations and meditations",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
