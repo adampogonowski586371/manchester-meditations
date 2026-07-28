@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+<article class="single-post">
+  <h1>{{ title }}</h1>
+  <p class="post-meta">{{ date | readableDate }}</p>
+  {{ content | safe }}
+  <p><a href="/">&larr; Back to Observations</a></p>
+</article>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} — Manchester Meditations{% else %}Manchester Meditations{% endif %}</title>
+  <meta name="description" content="Observations and meditations from Manchester.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-title">Manchester Meditations</a>
+      <nav class="site-nav">
+        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Observations</a>
+        <a href="/meditations/" {% if page.url == "/meditations/" %}class="active"{% endif %}>Meditations</a>
+        <a href="/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; {{ site.year }} Manchester Meditations.</p>
+  </footer>
+
+  <script>
+    const header = document.getElementById('site-header');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y > 40) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+      lastScroll = y;
+    }, { passive: true });
+  </script>
+</body>
+</html>
