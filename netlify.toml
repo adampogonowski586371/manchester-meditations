@@ -5,3 +5,15 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+[[redirects]]
+  from = "https://manchestermeditations.co.uk/*"
+  to = "https://manchestermeditations.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.manchestermeditations.co.uk/*"
+  to = "https://manchestermeditations.com/:splat"
+  status = 301
+  force = true
