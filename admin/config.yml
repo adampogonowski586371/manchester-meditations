@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Observations"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "post" }
+
+  - name: "meditations"
+    label: "Meditations"
+    folder: "meditations"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "meditation.njk" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "meditations" }
+
+  - name: "about"
+    label: "About Page"
+    files:
+      - file: "about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "About" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
+          - { label: "Body", name: "body", widget: "markdown" }
