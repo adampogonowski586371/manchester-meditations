@@ -6,8 +6,8 @@ portrait_right: seneca.jpg
 portrait_right_alt: Seneca
 ---
 <article class="single-post meditation">
-  <h1>{{ title }}</h1>
-  <p class="post-meta">{{ date | readableDate }}</p>
+  <h1 class="meditation-title">{{ title }}</h1>
+  <p class="post-date">{{ date | readableDate }}</p>
   {{ content | safe }}
   <p><a href="/meditations/">&larr; Back to Meditations</a></p>
 </article>
