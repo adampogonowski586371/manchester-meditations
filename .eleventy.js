@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("uploads");
+  eleventyConfig.addPassthroughCopy("img");
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("posts/*.md").sort((a, b) => b.date - a.date);

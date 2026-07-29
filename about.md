@@ -2,6 +2,10 @@
 layout: base.njk
 title: About
 permalink: /about/
+portrait_left: socrates.jpg
+portrait_left_alt: Socrates
+portrait_right: roosevelt.jpg
+portrait_right_alt: Theodore Roosevelt
 ---
 # About
 
