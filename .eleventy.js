@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("en-GB", {
+      weekday: "long",
       day: "numeric",
       month: "long",
       year: "numeric",
