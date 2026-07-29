@@ -266,7 +266,7 @@ a:hover { text-decoration: underline; }
 
 .single-post p { margin: 1em 0; }
 
-.single-post p:first-of-type::first-letter {
+.single-post .post-date + p::first-letter {
   font-size: 3.2rem;
   float: left;
   line-height: 0.85;
