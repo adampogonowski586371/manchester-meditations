@@ -5,22 +5,18 @@ portrait_left: marcus-aurelius.jpg
 portrait_left_alt: Marcus Aurelius
 portrait_right: epictetus.jpg
 portrait_right_alt: Epictetus
-pagination:
-  data: collections.posts
-  size: 50
-  alias: pagePosts
 ---
 <section class="hero">
-  <h1>Observations</h1>
-  <p class="lede">Stoic reflections on ordinary Manchester life — the weather, the streets, the small daily tests of temperament.</p>
+<h1>Observations</h1>
+<p class="lede">Stoic reflections on ordinary Manchester life — the weather, the streets, the small daily tests of temperament.</p>
 </section>
 
 <div class="post-list">
-  {% for post in pagePosts %}
-  <article class="post-card observation-card">
-    <p class="post-date">{{ post.date | readableDate }}</p>
-    <p class="observation-text">{{ post.data.excerpt }}</p>
-    <a class="read-more" href="{{ post.url }}">Read more &rarr;</a>
-  </article>
-  {% endfor %}
+{% for post in collections.posts %}
+<article class="post-card observation-card">
+<p class="post-date">{{ post.date | readableDate }}</p>
+<p class="observation-text">{{ post.data.excerpt }}</p>
+<a class="read-more" href="{{ post.url }}">Read more &rarr;</a>
+</article>
+{% endfor %}
 </div>

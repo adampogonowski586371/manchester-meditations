@@ -6,23 +6,19 @@ portrait_left: zeno.jpg
 portrait_left_alt: Zeno of Citium
 portrait_right: seneca.jpg
 portrait_right_alt: Seneca
-pagination:
-  data: collections.meditations
-  size: 20
-  alias: pageMeditations
 ---
 <section class="hero">
-  <h1>Meditations</h1>
-  <p class="lede">Slower, longer pieces — reflections that took more than a walk to work out.</p>
+<h1>Meditations</h1>
+<p class="lede">Slower, longer pieces — reflections that took more than a walk to work out.</p>
 </section>
 
 <div class="post-list">
-  {% for post in pageMeditations %}
-  <article class="post-card meditation-card">
-    <h2 class="meditation-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-    <p class="post-date">{{ post.date | readableDate }}</p>
-    <p>{{ post.data.excerpt }}</p>
-    <a class="read-more" href="{{ post.url }}">Read more &rarr;</a>
-  </article>
-  {% endfor %}
+{% for post in collections.meditations %}
+<article class="post-card meditation-card">
+<h2 class="meditation-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+<p class="post-date">{{ post.date | readableDate }}</p>
+<p>{{ post.data.excerpt }}</p>
+<a class="read-more" href="{{ post.url }}">Read more &rarr;</a>
+</article>
+{% endfor %}
 </div>
