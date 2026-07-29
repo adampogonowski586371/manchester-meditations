@@ -15,4 +15,4 @@ Nothing here is academic. It's just an attempt to notice what is and isn't up to
 
 Posts are written and published here directly, no fuss, no algorithm.
 
-Get in touch: [hello@manchestermeditations.example](mailto:hello@manchestermeditations.example)
+Get in touch: [manchestermeditations@gmail.com](mailto:manchestermeditations@gmail.com)
