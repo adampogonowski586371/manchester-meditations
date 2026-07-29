@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} — Manchester Meditations{% else %}Manchester Meditations{% endif %}</title>
-  <meta name="description" content="Observations and meditations from Manchester.">
+  <meta name="description" content="A Stoic's thoughts from Manchester — reflections on ordinary life through an ancient lens.">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a href="/" class="site-title">Manchester Meditations</a>
+      <a href="/" class="site-title-group">
+        <span class="site-title">Manchester Meditations</span>
+        <span class="site-tagline">A Stoic's Thoughts from Manchester</span>
+      </a>
       <nav class="site-nav">
         <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Observations</a>
         <a href="/meditations/" {% if page.url == "/meditations/" %}class="active"{% endif %}>Meditations</a>
