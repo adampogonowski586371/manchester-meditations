@@ -17,7 +17,7 @@ portrait_right_alt: Seneca
 <article class="post-card meditation-card">
 <h2 class="meditation-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
 <p class="post-date">{{ post.date | readableDate }}</p>
-<p>{{ post.data.excerpt }}</p>
+<p>{{ (post.data.excerpt or post.templateContent) | safe }}</p>
 <a class="read-more" href="{{ post.url }}">Read more &rarr;</a>
 </article>
 {% endfor %}
