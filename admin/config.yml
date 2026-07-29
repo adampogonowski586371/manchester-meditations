@@ -13,6 +13,7 @@ collections:
     folder: "posts"
     create: true
     slug: "{{slug}}"
+    identifier_field: "date"
     fields:
       - { label: "Title", name: "title", widget: "string", required: false  }
       - { label: "Date", name: "date", widget: "datetime" }
