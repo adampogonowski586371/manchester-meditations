@@ -10,15 +10,25 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a href="/" class="site-title-group">
-        <span class="site-title">Manchester Meditations</span>
-        <span class="site-tagline">A Stoic's Thoughts from Manchester</span>
-      </a>
-      <nav class="site-nav">
-        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Observations</a>
-        <a href="/meditations/" {% if page.url == "/meditations/" %}class="active"{% endif %}>Meditations</a>
-        <a href="/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About</a>
-      </nav>
+      {% if portrait_left %}
+      <img class="portrait portrait-left" src="/img/{{ portrait_left }}" alt="{{ portrait_left_alt }}">
+      {% endif %}
+
+      <div class="title-block">
+        <a href="/" class="site-title-group">
+          <span class="site-title">Manchester Meditations</span>
+          <span class="site-tagline">A Stoic's Thoughts from Manchester</span>
+        </a>
+        <nav class="site-nav">
+          <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Observations</a>
+          <a href="/meditations/" {% if page.url == "/meditations/" %}class="active"{% endif %}>Meditations</a>
+          <a href="/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About</a>
+        </nav>
+      </div>
+
+      {% if portrait_right %}
+      <img class="portrait portrait-right" src="/img/{{ portrait_right }}" alt="{{ portrait_right_alt }}">
+      {% endif %}
     </div>
   </header>
 
