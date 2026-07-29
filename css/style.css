@@ -113,7 +113,7 @@ a:hover { text-decoration: underline; }
 .site-tagline {
   font-size: 1rem;
   font-style: italic;
-  color: var(--muted);
+  color: var(--ink);
   transition: font-size 0.25s ease, opacity 0.25s ease;
 }
 
