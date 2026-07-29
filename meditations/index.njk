@@ -1,12 +1,15 @@
 ---
 layout: base.njk
 title: Meditations
-permalink: /meditations/
 eleventyExcludeFromCollections: true
 portrait_left: zeno.jpg
 portrait_left_alt: Zeno of Citium
 portrait_right: seneca.jpg
 portrait_right_alt: Seneca
+pagination:
+  data: collections.meditations
+  size: 20
+  alias: pageMeditations
 ---
 <section class="hero">
   <h1>Meditations</h1>
@@ -14,7 +17,7 @@ portrait_right_alt: Seneca
 </section>
 
 <div class="post-list">
-  {% for post in collections.meditations %}
+  {% for post in pageMeditations %}
   <article class="post-card meditation-card">
     <h2 class="meditation-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
     <p class="post-date">{{ post.date | readableDate }}</p>
