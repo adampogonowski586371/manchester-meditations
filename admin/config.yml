@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: adampogonowski586371/manchester-meditations
   branch: main
+  base_url: https://manchester-meditations.netlify.app
+  auth_endpoint: .netlify/functions/auth
 
 media_folder: "uploads"
 public_folder: "/uploads"
