@@ -1,0 +1,122 @@
+:root {
+  --ink: #1b1b1b;
+  --paper: #faf8f4;
+  --muted: #6b6b6b;
+  --accent: #8a3b2f;
+  --border: #e4dfd6;
+  --max-width: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Sticky, shrinking header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 248, 244, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.25s ease;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: padding 0.25s ease;
+}
+
+.site-header.shrink .header-inner {
+  padding: 12px 24px;
+}
+
+.site-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  transition: font-size 0.25s ease;
+}
+
+.site-header.shrink .site-title {
+  font-size: 1rem;
+}
+
+.site-nav a {
+  margin-left: 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  color: var(--accent);
+}
+
+.site-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 8px;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.post-list { display: flex; flex-direction: column; gap: 40px; }
+
+.post-card h2 { margin-bottom: 4px; font-size: 1.4rem; }
+
+.post-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 4px 0 12px;
+}
+
+.read-more { font-size: 0.9rem; }
+
+.single-post h1 { font-size: 2rem; margin-bottom: 4px; }
+
+.single-post p { margin: 1em 0; }
+
+.meditation { font-style: normal; }
+
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 560px) {
+  .header-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .site-nav a { margin-left: 0; margin-right: 16px; }
+}
