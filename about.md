@@ -11,7 +11,7 @@ portrait_right_alt: Theodore Roosevelt
 
 Manchester Meditations is an ongoing collection of Stoic reflections — written by someone living an ordinary life in Manchester.
 
-They are divided into short observations - thoughts that may have occurred during the day, maybe things seen too - and longer meditations.
+They are divided into short ***Observations*** - thoughts that may have occurred during the day, maybe things seen too - and longer ***Meditations***, which go more into depth about various topics seen or encountered or thought of during the day.
 
 I am writing these for my own Stoic journey and development; to help me understand the underpinnings of this way of life and its philosophical bases, and to help develop it, in some small way, to fit modern day life.
 
