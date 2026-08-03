@@ -12,7 +12,7 @@ collections:
     label: "Observations"
     folder: "posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
     identifier_field: "body"
     fields:
       - { label: "Title", name: "title", widget: "string", required: false  }
