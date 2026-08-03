@@ -311,5 +311,9 @@
   .site-nav a { margin: 0 8px; font-size: 0.85rem; }
   .single-post { padding: 24px 22px; }
   .post-card { padding: 20px 20px; }
+  .site-header.shrink .portrait { width: 34px; height: 34px; }
+  .site-tagline { font-size: 0.85rem; }
+  .title-block { gap: 6px; }
+  .site-title { white-space: normal; }
   }
   
