@@ -15,7 +15,6 @@ portrait_right_alt: Epictetus
 <article class="post-card observation-card">
 <p class="post-date">{{ post.date | readableDate }}</p>
 <p class="observation-text">{{ (post.data.excerpt or post.templateContent) | safe }}</p>
-<a class="read-more" href="{{ post.url }}">Read more &rarr;</a>
 </article>
 {% endfor %}
 </div>
