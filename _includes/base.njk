@@ -1,12 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} — Manchester Meditations{% else %}Manchester Meditations{% endif %}</title>
-  <meta name="description" content="A Stoic journal from Manchester — Stoic observations and meditations on ordinary life through an ancient lens. Manchester Stoic reflections, one day at a time.">
-  <meta name="keywords" content="Stoic, Stoic journal, Stoic meditations, Manchester Stoic, Stoic Manchester, Stoic observations, Stoic Quotes">
-  <link rel="stylesheet" href="/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%- set metaTitle = title or site.name -%}
+{%- set metaDescription = description or excerpt or site.defaultDescription -%}
+{%- set canonicalUrl = site.url + page.url -%}
+<title>{% if title %}{{ title }} — Manchester Meditations{% else %}Manchester Meditations{% endif %}</title>
+<meta name="description" content="{{ metaDescription }}">
+<meta name="keywords" content="Stoic, Stoic journal, Stoic meditations, Manchester Stoic, Stoic Manchester, Stoic observations, Stoic Quotes, Stoic philosophy">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ canonicalUrl }}">
+<meta property="og:type" content="{% if date %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="Manchester Meditations">
+<meta property="og:title" content="{{ metaTitle }}">
+<meta property="og:description" content="{{ metaDescription }}">
+<meta property="og:url" content="{{ canonicalUrl }}">
+<meta property="og:image" content="{{ site.url }}/img/marcus-aurelius.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ metaTitle }}">
+<meta name="twitter:description" content="{{ metaDescription }}">
+<meta name="twitter:image" content="{{ site.url }}/img/marcus-aurelius.jpg">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  {% if date %}
+  "@type": "BlogPosting",
+  "headline": {{ (title or "A Stoic Observation from Manchester Meditations") | dump | safe }},
+  "datePublished": {{ date.toISOString() | dump | safe }},
+  "description": {{ metaDescription | dump | safe }},
+  "url": {{ canonicalUrl | dump | safe }},
+  "author": { "@type": "Person", "name": "Manchester Meditations" },
+  "publisher": { "@type": "Organization", "name": "Manchester Meditations" },
+  "mainEntityOfPage": {{ canonicalUrl | dump | safe }}
+  {% else %}
+  "@type": "WebSite",
+  "name": "Manchester Meditations",
+  "url": {{ site.url | dump | safe }},
+  "description": {{ metaDescription | dump | safe }}
+  {% endif %}
+}
+</script>
 </head>
 <body>
   <header class="site-header" id="site-header">
